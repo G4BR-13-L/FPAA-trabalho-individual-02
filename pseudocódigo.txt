@@ -1,21 +1,19 @@
 ALGORITMO MaxMinSelect(array)
     ENTRADA: Um array de números (array)
     SAÍDA: O valor máximo e o valor mínimo no array
-
-    // Passo 1: Inicialização
-    n = tamanho(array)  // Obtém o tamanho do array
+    
+    n = tamanho(array)
     SE n == 0 ENTÃO
         RETORNE "Array vazio"
     FIM SE
 
-    // Passo 2: Inicializa max e min
+    
     SE n == 1 ENTÃO
         max = array[0]
         min = array[0]
         RETORNE (max, min)
     FIM SE
 
-    // Passo 3: Compara os dois primeiros elementos para inicializar max e min
     SE array[0] > array[1] ENTÃO
         max = array[0]
         min = array[1]
@@ -24,7 +22,6 @@ ALGORITMO MaxMinSelect(array)
         min = array[0]
     FIM SE
 
-    // Passo 4: Itera sobre o array em pares
     PARA i = 2 ATÉ n-1 PASSO 2 FAÇA
         // Verifica se há um número ímpar de elementos no final
         SE i == n-1 ENTÃO
@@ -53,6 +50,5 @@ ALGORITMO MaxMinSelect(array)
         FIM SE
     FIM PARA
 
-    // Passo 5: Retorna os valores de max e min
     RETORNE (max, min)
 FIM ALGORITMO
